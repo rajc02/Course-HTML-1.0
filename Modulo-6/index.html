@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid red;
+            padding: .25em .5em;
+        }
+
+        tfoot {
+            background: yellow;
+        }
+
+        thead {
+            color: red;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+    Tablas: Formas de organizar la informacion en cuadriculas, formado por filas (horizontal) y columnas (vertical).    
+-->
+    <h1>Estrucutra de tablas en HTML</h1>
+    <!--
+        Se usan con la etiqueta table para encerrar a toda la tabla. Aca no existen columnas, las celdas con las divisiones de cada fila.
+
+        Las filas se marcan con <tr></tr> - table row
+        Las celdas se marcan con <td></td> - table data
+        Las celdas de encabezado se marcan con <tr></tr> - table 
+
+
+        - Dentro de `<table>`, puedes usar las siguientes etiquetas:
+            - `<thead>`: Define el encabezado de la tabla.
+            - `<tbody>`: Define el cuerpo de la tabla.
+            - `<tfoot>`: Define el pie de la tabla.
+            - `<tr>`: Define una fila en la tabla.
+            - `<th>`: Define una celda de encabezado.
+            - `<td>`: Define una celda de datos.
+    -->
+    
+    <table>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Final</td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <!--
+    
+        Estructura completa de una tabla
+        - `<thead>`: Define el encabezado de la tabla.
+        - `<tbody>`: Define el cuerpo de la tabla.
+        - `<tfoot>`: Define el pie de la tabla.
+        - `<tr>`: Define una fila en la tabla.
+        - `<th>`: Define una celda de encabezado.
+        - `<td>`: Define una celda de datos.
+        - `<caption>`: Define la descripcion de la tabla.
+        
+            <table>
+            <caption></caption>
+            <th>
+                <th>
+                    <td></td>
+                    <td></td>
+                </th>
+            </th>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+            <tfood>
+                <td></td>
+                <td></td>
+            </tfood>
+        </table>
+    
+    -->
+
+    <h2>Mi Horario de Estudios</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <td>Desarrollo de Aplicaciones Open Source</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Desarrollo de Aplicaciones Open Source</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>Finanzas e Ingenieria Economica</td>
+                <td>Redes y Comunicaciones de Datos</td>
+                <td></td>
+                <td>Redes y Comunicaciones de Datos</td>
+            </tr>
+            
+            <tr>
+                <td>Aplicaciones Web</td>
+                <td></td>
+                <td>Aplicaciones Web</td>
+                <td></td>
+                <td>Finanzas e Ingenieria Economica</td>
+                
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>TOTAL DE CURSOS:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>4 cursos</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!--
+        Agrupar celdas
+        - Se hace con atributos para poder agrupar celdas,
+        
+        coldspan = n - Agrupar columnas
+        rowspan = n - Agrupar filas
+        
+        Donde n es la cantidad de columnas o filas que se van a combinar o agrupar
+    -->
+
+    <h2>Agrupar Celdas</h2>
+    <table>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="3">Final</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+
+    <h2>Mi Horario de Estudios con agrupamiento de celdas</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <td>Desarrollo de Aplicaciones Open Source</td>
+                <td colspan="2"></td>
+                <td rowspan="3"></td>
+                <td>Desarrollo de Aplicaciones Open Source</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>Finanzas e Ingenieria Economica</td>
+                <td>Redes y Comunicaciones de Datos</td>
+                <td>Redes y Comunicaciones de Datos</td>
+            </tr>
+            
+            <tr>
+                <td>Aplicaciones Web</td>
+                <td></td>
+                <td>Aplicaciones Web</td>
+                <td>Finanzas e Ingenieria Economica</td>
+                
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">TOTAL DE CURSOS:</td>
+                <td>4 cursos</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!--
+        Colgroup: Se utiliza para agrupar un conjunto de columnas dentro de una tabla
+
+        Dentro de esta etiqueta se incluye una o mas etiqueta <col> que cada una representa una columna en la tabla.
+    
+    -->
+
+    <h2>Colgroup</h2>
+    <table>
+        <colgroup>
+            <col span="3">
+            <col style="background: yellow">
+        </colgroup>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="3">Final</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+</body>
+</html>

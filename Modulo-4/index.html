@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+<body>
+    <!--
+    Enlaces:
+    * <a href="destino-del-enlace"></a> - ancle o ancla, se utiliza para crear enlaces en una página web y ermite a los usuarios navegar a otras páginas
+    
+    -->
+
+    <!-- Desde que la pagina esta en internet se necesita el protocolo https para poder decir al navegador buscalo en internet, es el protocolo para buscar por internet
+     
+    <a href="https://google.com"><article>Ir a google</article></a>
+    -->
+   
+
+    <!-- Ahora si los enlaces no tienen https, significa que estamos haciendo enlaces a dentro de nuestro propio proyecto, busca dentro de nuestra carpeta que estamos trabajando-->
+    <h1>Home</h1>
+    <nav>
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./contacto/">Ir a contacto</a></li>
+            <li><a href="/anclas.html">Abrir anclas</a></li>
+            <li><a href="./contacto/" target="_blank">Abrir contacto en una nueva pestaña</a></li>
+            <li><a href="./contacto/" real="nofollow">Abrir contacto en una nueva pestaña</a></li>
+            <li><a href="documento.pdf" download="Guia.pdf">Descargar Guía en PDF</a></li>
+            <li><a href="goku.png" download="goku.png">Goku</a></li>
+            <li><a href="/rutas/">Ir a rutas</a></li>
+            <li><a href="listas.html">Ir a listas</a></li>
+            <li><a href="https://google.com"><article>Ir a google</article></a></li>
+        </ul>
+    </nav>
+
+    
+
+    <!-- 
+    Si usamos ../ subimos un nivel, y ../../ subimos dos, si coloco ./ estoy diciendo quedate en la misma carpeta y si coloco / va hacia la raiz del proyecto.
+    Si la carpeta de destino tiene un index.html, el navegador lo abrirá automáticamente. 
+    Para evitar errores, es mejor especificar el archivo directamente (ej: ../../index.html). 
+    -->
+
+    <!-- 
+        Atributos de los enlaces
+        - Obligatorios: 
+        * href="destino" -> Define a la URL que se enlaza
+
+        - Opcionales:
+        * target="_blank" -> Abre el destino en una nueva pestaña, nos sirve para enlaces externo, con target controlamos como abriremos el enlace.
+        * real="nofollow" -> Con esto no damos SEO o posicionamiento al destino del enlace, es util para cualquier enlace que no sse desea influir en los resultados de busqueda de nuestra pagina. (afiliados, anuncios, etc)
+        *download: Indicamos que ese enlace apunta a descargarse un archivo en lugar de abrir otra pestaña, solo sirve para archivos de nuestro proyecto no externos.
+    -->
+
+</html>

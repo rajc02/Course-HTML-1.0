@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        * Elementos de bloque -  Los elementos en bloque son aquellos que ocupan toda la anchura disponible en su contenedor y comienzan en una nueva línea.
+            Parrafos: p
+            Elementos de seccion
+            Encabezados: h1,...,h6
+            blockquote: Para hacer una cita
+            pre: Sirve para pre formatear texto, aca si importa los saltos de linea si respeta el navegador.
+            div: Utilizado para agrupar y estructurar otros elementos, sin aportar ningún significado semántico específico.
+            code: Se usa para definir fragmentos de código fuente.
+
+        Elementos de linea - Los elementos en línea son aquellos que no comienzan en una nueva línea y solo ocupan el espacio necesario para su contenido.
+        span, a, strong, code, img
+
+        OBS: Un elemento de linea no puede contener a un elemento de bloque, pero si al reves.
+        OBS2: Todos los elementos de sección son elementos de bloque.
+    -->
+    <p>EDteam</p> 
+    <span>Hola</span>
+    <blockquote>En español no explica mejor que edteam</blockquote>
+
+    <blockquote>
+        <p>"La vida no se mide por las veces que respiras, sino por los momentos que te quitan el aliento."</p>
+        <footer>— George Carlin</footer>
+    </blockquote>
+
+    <pre>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit. Consectetur quo
+        temporibus ratione, accusantium odit
+        cupiditate assumenda corporis maxime eos excepturi! 
+        Pariatur expedita quod perferendis delectus inventore
+        laborum officia aliquid nisi!
+    </pre>
+
+    <pre>
+        <code>
+            function holaMundo() {
+                console.log("¡Hola, mundo!");
+            }
+        </code>
+    </pre>
+    <div>
+        &lt;div&gt;&lt;/div&gt; No es una etiqueta semantica
+    </div>
+</body>
+</html>

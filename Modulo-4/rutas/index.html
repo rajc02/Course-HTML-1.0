@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rutas</h1>
+    <!--
+        1. Rutas absolutas (estan fuera del proyecto): Comienzan con https://, porque son unicas (URL - Uniform Resource Locator)
+
+        2. Rutas relaticas (dentro del proyecto):
+            2.1. Relativas al origen
+                - Punto de partida es el archivo donde creamos la ruta
+                - Si el destino esta en la misma carpeta: nombre del archivo
+                - Si esta en una carpeta por debajo: nombre_de_la_carpeta/nombre_del_archivo       
+                - Si esta en una carpeta por encima: ../nombre_del_archivo
+            
+                2.2. Relativas a la raiz del proyecto
+                - Punto de partida la raiz del proyecto ("/")
+    
+    -->
+    <!-- Ruta relativa a la raiz-->
+    <a href="/">Ir al home</a>
+    <!-- Ruta relativa al origen-->
+    <a href="../index.html">Ir al home</a>
+</body>
+</html>

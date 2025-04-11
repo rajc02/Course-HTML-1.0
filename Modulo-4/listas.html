@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./contacto/">Ir a contacto</a></li>
+            <li><a href="/anclas.html">Abrir anclas</a></li>
+            <li><a href="./contacto/" target="_blank">Abrir contacto en una nueva pestaña</a></li>
+            <li><a href="./contacto/" real="nofollow">Abrir contacto en una nueva pestaña</a></li>
+            <li><a href="documento.pdf" download="Guia.pdf">Descargar Guía en PDF</a></li>
+            <li><a href="goku.png" download="goku.png">Goku</a></li>
+            <li><a href="/rutas/">Ir a rutas</a></li>
+            <li><a href="listas.html">Ir a listas</a></li>
+            <li><a href="https://google.com"><article>Ir a google</article></a></li>
+        </ul>
+    </nav>
+
+    <h1>Listas en HTML</h1>
+    <a href="./">Ir al Home</a>
+    <!--
+        Hay dos tipos de listas:
+        1.  Listas ordenadas <ol></ol> (ordered list)
+            - Usan numeros o letras
+            - Las usamos cuando tenemos un orden especifico.
+            - El atributo mas comun de este tipo de lista es type="", que especifica basicamente el tipo de viñeta para los elementos de las listas (Solo acepta "1", "A", "i", "a", "I"), y el atributo start="" indica en que comienza la lista.
+
+        2.  Listas no ordenadas <ul></ul> (unordered list)
+            - Usan viñetas
+            - Las usamos cuando no tenemos un orden especifico.
+        
+
+        Para cualquiera de estas listas, los items (es decir cada elemento de la lista) usan la atiqueta <li><li>, las listas pueden tener sublistas
+        
+        ol -> ordered list
+        ul -> unordered list
+        li -> list item 
+
+        OBS: Las listas pueden tener sublistas.
+    -->
+
+    <h2>Listas Ordenadas</h2>
+    <ol>
+        <li>Lunes</li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+    </ol>
+
+    <h2>Listas No Ordenadas</h2>
+    <ul>
+        <li>Lunes</li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+    </ul>
+
+    <h2>Listas con sublistas</h2>
+    <ol type="I" start="">
+        <li>
+            Lunes
+            <!-- Sub-lista-->
+            <ul>
+                <li>
+                    Estudiar HTML
+                    <!-- Sub-lista-->
+                    <ul>
+                        <li>Enlaces</li>
+                        <li>Listas</li>
+                    </ul>
+                </li>
+                <li>Buscar ofertas de trabajo</li>
+            </ul>
+        </li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+        <li>Jueves</li>
+    </ol>
+
+    <h2>Lista con el atributo start=""</h2>
+    <h3>Segunda mitad de Semana</h3>
+    <ol start="4">
+        <li>Viernes</li>
+        <li>Sabado</li>
+        <li>Domingo</li>
+    </ol>
+    <ol start="4" type="a">
+        <li>Viernes</li>
+        <li>Sabado</li>
+        <li>Domingo</li>
+    </ol>
+
+    <h2>Listas de definicion</h2>
+    <!-- La usamos cuando queremos definir terminos palabra y su explicacion.
+    - dl -> definition list
+    - dt -> definition term
+    - dd -> definition description
+    -->
+     <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>Etiqueta</dt>
+        <dd>Son los nombres de los elemento HTML y comienzan con el simbolo de &lt; &gt;</dd>
+     </dl>
+</body>
+</html>

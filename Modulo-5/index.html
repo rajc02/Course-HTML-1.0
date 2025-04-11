@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 05 - Contenido Embebido</title>
+</head>
+<body>
+    <!--
+    Contenido embebido: Aquel contenido que no es parte del codigo HTML
+    
+    Exiten dos tipos de imagenes:
+    1. Vectoriales: Son matematicos (se crean con formulas) y no tienen resolucion, es decir, no se pixelean en ningun nivel de zoom. Generalmente para logotipos y textos, donde no se encuentre mucha complejidad en la foto.
+
+    2. Mapa de bits: Son muchos cuadrados de colores (pixeles) que juntos forman una imagen. A mas pixeles mas calidad de imagen. A cierto nivel de zoom se pixelean (se ven los pixeles). Principalmente para fotos
+    -->
+
+    <!--
+    Formato de imagenes
+        svg - Formato vectorial para web
+        jpg, jpeg - Para fotografias
+        png - Transparencia o colores planos (son los mas pesados)
+        gif - Son para animaciones o videos muy cortos (menos de 10 segundos)
+        webp - Combinan lo mejor de jpg y png con menos peso.
+        avif - Tiene mejor compresion que webp (pesa menos sin perder calidad) (https://tinypng.com/)
+        heif - El formato de Apple para fotografias, no es recomendable para web
+        OBS: Una imagen promedio 23kb
+    -->
+
+    <!--
+    En HTML las imagenes se insertan con la etiqueta <img src="">, lo mejor es que se encuentren en nuestro propio proyecto
+    - Un atributo title: Proporciona un texto emergente (tooltip) que aparece cuando el usuario pasa el cursor sobre la imagen.
+    <img src="icono.png" alt="Icono de usuario" title="Perfil de usuario">
+    - loading: indica como se debe cargar la imagen si e en carga diferida (lazy) o si es en carga inmediata (eager), lazy mejora el rendimiento de la pagina cargando imagenes solo cuando estan a punto de entrar en la vista, esyo mejora la velocidad de carga de la pagina.
+
+    - srcset y sizes: Permiten proporcionar múltiples resoluciones de una imagen y dejar que el navegador elija la más adecuada según el dispositivo.
+    - `srcset` especifica diferentes imágenes y `sizes` define las condiciones bajo las cuales se deben usar.
+    Ejemplo:
+    <img src="small.jpg" srcset="small.jpg 600w, medium.jpg 1200w, large.jpg 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Foto adaptable"> 
+    -->
+
+    <h1>Contenido embebido</h1>
+    <img src="/img/Donald-duck25.webp" alt="Imagen del Pato Donald" title="Pato Donald" loading="lazy"> <br>
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjhoZW05ZHp4a2U2dG84OWM4amE3YWRxdHkzOGczajVjdGEwcWNxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qz4M7MF29VZbQ68bFm/giphy.gif" alt="Anomacion del Pato Donald volando en una escoba">
+
+    <!--
+        Picture: Se utiliza para ofrecer múltiples versiones de una imagen, el navegador elige la seleccion de imagen mas adecuada segun las caracteristicas del dispositivo y la pantalla, para optimizar las imagenes.
+
+        srcet - Se usa para ofrecer multiples versiones de imagenes
+        media - En este atributo usamos media queries para definir cuando debe mostrarse cada version de la imagen, adaptandose a los anchos de la pantalla.
+    -->
+
+    <picture>
+        <!-- 
+        - Los navegadores revisan los <source> en orden. Si uno se cumple, ignoran el resto.
+        <source srcset="imagen-grande.jpg" media="(min-width: 800px)">
+        <source srcset="imagen-mediana.jpg" media="(min-width: 400px)"> -->
+
+        <!-- Si quiero especificar que mi imagen es webp tendria que colocar el atributo type con su valor -->
+        <source srcset="/img/Donald-duck25.webp" type="image/webp">
+        <img src="/img/Donald-duck25.webp" alt="Pato Donald"> <!-- Actua como imagen de respaldo (fallback) si no le sirve ninguna de las anteriores. -->
+    </picture>
+
+
+    <!--
+        figure: Es para mostrar cualquier elemento que rompa el flujo del contenido, es autocontenido.
+        Dentro de figure esta figcaption que es la descripcion para el contenido de figure.
+    -->
+
+    <figure>
+        <img src="img/Donald-duck25.webp" alt="Pato donald" width="200" height="500">
+        <figcaption>Imagen del pato Donald</figcaption>
+    </figure>
+
+    <!-- Audio y video -->
+    <video src="media/2025-04-05 20-20-18.mp4" width="500" controls poster="img/Donald-duck25.webp"></video>
+
+    <audio src="media/audio.mp3" controls></audio>
+
+    <!--  Emebeber contenido -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IZo0eZ9ZZOA?si=BasQncni1dDu9KCz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+     
+</body>
+</html>
